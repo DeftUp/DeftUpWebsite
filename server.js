@@ -10,29 +10,29 @@ const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
 
-// const mongoose = require('mongoose')
-// mongoose.connect(process.env.DATABASE_URL, {
-//     useNewUrlParser: true
-// })
-// const db = mongoose.connection
-// db.on('error', error => console.error(error))
-// db.once('open', () => console.log('Connected to Mongoose'))
+const mongoose = require('mongoose')
+mongoose.connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true
+})
+const db = mongoose.connection
+db.on('error', error => console.error(error))
+db.once('open', () => console.log('Connected to Mongoose'))
 
-const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017';
-const dbName = 'defterdb';
-const client = new MongoClient(url);
-client.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected successfully to server");
-    const db = client.db(dbName);
-    // db.createCollection("defters", function(err, res) {
-    //     if (err) throw err;
-    //     console.log("Collection created!")
-    //     client.close();
-    // });
-    // client.close();
-});
+// const MongoClient = require('mongodb').MongoClient;
+// const url = 'mongodb://localhost:27017';
+// const dbName = 'defterdb';
+// const client = new MongoClient(url);
+// client.connect(function(err) {
+//     if (err) throw err;
+//     console.log("Connected successfully to server");
+//     const db = client.db(dbName);
+//     // db.createCollection("defters", function(err, res) {
+//     //     if (err) throw err;
+//     //     console.log("Collection created!")
+//     //     client.close();
+//     // });
+//     // client.close();
+// });
 
 const passport = require('passport')
 const initializePassport = require('./passport-config')
