@@ -1,0 +1,45 @@
+<h1 class = "middleR" style = "text-align: center"> Customer Account </h1>
+<div2>
+    <form name="myform">
+        <label type="text"> First Name: </label>
+        <input type="text" name="first" minlength="1" maxlength="20"><br><br>
+        Last Name:
+        <input type="text" name="last" minlength="1" maxlength="20"><br><br>
+        Email:
+        <input type="text" name="email"><br><br>
+        Phone Number:
+        <input type="text" name="phone"><br><br>
+        Gender:
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="other">Other<br><br>
+        Full Home Address:
+        <input type = "text" name = "address"><br><br>
+        Age Group:
+        <select name="age_grp" size=1>
+            <option value="blank" selected></option>
+            <option value="grp1"><18 - 21 years old</option>
+            <option value="grp2">21 - 25 years old</option>
+            <option value="grp3">26 - 35 years old</option>
+            <option value="grp4">36 - 50 years old</option>
+            <option value="grp5">> 50 years old</option>
+        </select>
+        <br><br>
+        Create Username:
+        <input type="text" name="usrname" minlength="4" maxlength="12"><br><br>
+        Enter Password:
+        <input type="password" name="passwd" minlength="9"><br><br>
+        Confirm Password:
+        <input type="password" name="confirm" minlength="9"><br>
+        <br><br>
+
+        <input type="submit" value="SIGNUP"
+               style = "font-family: 'Arial Black'"
+               style = "color: white" onclick = "validateAll()">
+        <input type="reset" value="CLEAR"
+               style = "font-family: 'Arial Black'"
+               onclick = "clearAll()">
+        <!--<a href="Register.html" class="button" style = "font-family: 'Arial Black'">GET STARTED</a>-->
+        <div id="output"></div>
+    </form>
+</div2>
